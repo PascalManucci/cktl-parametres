@@ -1,0 +1,21 @@
+server:
+  host: localhost
+  port: 8081
+
+# spring:
+#   datasource:
+#     url: jdbc:h2:mem:mydb
+#     username: sa
+#     password: password
+    # driverClassName: org.h2.Driver
+spring:
+   datasource:
+     url: jdbc:oracle:thin:@bdorsatl3.sb.asso-cocktail.org:5221/DEVEICT01
+     username: grhum
+     password: grhum
+     driver-class-name: oracle.jdbc.driver.OracleDriver
+   jpa:
+     spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+   hikari:
+     connection-timeout: 60000
+     maximum-pool-size: 10

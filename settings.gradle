@@ -1,0 +1,4 @@
+rootProject.name = 'cktl-Parametres'
+include ':domaines'
+include ':application'
+

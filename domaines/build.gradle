@@ -1,0 +1,16 @@
+plugins {
+    id 'java-library'
+    id 'jacoco'
+}
+
+compileJava {
+    //Utiliser pour la désérialisation jackson
+    options.compilerArgs << '-parameters'
+}
+
+// dependencies {
+//     implementation 'org.apache.commons:commons-lang3'
+//     implementation 'org.apache.commons:commons-collections4'
+//     testImplementation 'org.mockito:mockito-junit-jupiter'
+//       compileOnly 'org.jetbrains:annotations'
+// }

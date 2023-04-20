@@ -1,0 +1,49 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.5'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id 'java'
+}
+
+dependencies {
+    implementation project(':domaines')
+    // compileOnly 'org.jetbrains:annotations'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly    'com.h2database:h2'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework:spring-webflux'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation "javax.xml.bind:jaxb-api"
+    implementation "com.fasterxml.jackson.core:jackson-core"
+    implementation "com.fasterxml.jackson.core:jackson-annotations"
+    implementation "com.fasterxml.jackson.core:jackson-databind"
+    implementation "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider"
+    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
+    implementation "javax.annotation:javax.annotation-api"
+    implementation 'javax.validation:validation-api'
+    implementation "com.google.code.findbugs:jsr305:3.0.2"
+    implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.2.0'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.6'
+    implementation 'org.apache.commons:commons-lang3'
+    implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.0'
+    implementation 'org.apache.httpcomponents:httpclient'
+    implementation 'org.hibernate.validator:hibernate-validator'
+
+    implementation 'javax.inject:javax.inject:1'
+    // testImplementation group: 'org.springframework', name: 'spring-test', version: '4.0.5.RELEASE'
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.5.1'
+
+    // Pour Spring Cloud Config
+    // implementation 'spring-cloud-config-server'
+    // implementation 'org.springframework:spring-jdbc:6.0.6'
+    // Java 8 oblige, vieille version de Spring Cloud Server, sinon ça compile pas ...
+    implementation 'org.springframework.cloud:spring-cloud-config-server:3.1.5'
+    // implementation 'org.springframework.cloud:spring-cloud-config-server:4.0.2'
+
+    // Lombok, à virer à terme ... à voir ...
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+    testCompileOnly 'org.projectlombok:lombok:1.18.26'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.26'
+
+}
