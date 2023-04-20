@@ -16,7 +16,7 @@ public class ParametreService {
 
     }
 
-    public List<Parametre> listerParametragePgi() {
+    public List<Parametre> listerParametrage() {
         return repository.listerLesParametres();
     }
 }

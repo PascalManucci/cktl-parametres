@@ -36,7 +36,6 @@ public class SpringCloudCollectorParameterAdapter extends CollectorParametreAdap
     public CollectorParametreAdapter collect() {
         List<SpringCloudConfigDataParametre> params = jpaRepository.findAll();
 
-
         MapperSpringCloudConfigParametre mapper = new MapperSpringCloudConfigParametre();
         this.parametres = jpaRepository.findAll().stream().map(s-> mapper.mapParameter(s)).collect(Collectors.toList());
         return this;

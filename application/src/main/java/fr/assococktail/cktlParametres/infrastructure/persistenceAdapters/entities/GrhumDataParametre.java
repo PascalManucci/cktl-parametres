@@ -1,10 +1,12 @@
 package fr.assococktail.cktlParametres.infrastructure.persistenceAdapters.entities;
 
 import lombok.Data;
+import lombok.Getter;
+
 import javax.persistence.*;
 import java.util.Date;
 
-@Data
+@Getter
 @Entity
 @Table(name = "GRHUM_PARAMETRES")
 public class GrhumDataParametre {

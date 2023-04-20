@@ -3,10 +3,11 @@ package fr.assococktail.cktlParametres.parametres;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import lombok.Getter;
 import lombok.ToString;
 
 @ToString
-@Data
+@Getter
 public class ParametreDTO extends JsonDTO {
 
     @JsonIgnore

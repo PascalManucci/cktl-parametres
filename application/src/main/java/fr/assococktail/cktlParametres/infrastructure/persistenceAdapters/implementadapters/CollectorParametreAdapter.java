@@ -23,12 +23,10 @@ abstract public class CollectorParametreAdapter {
     }
 
 
-    public boolean anticorruption(GrhumDataParametre parametre){
-        // Futur anticorruption layer générique à tous flux
+    public boolean anticorruption(StandardDataParametre parametre){
+        // Futur "anticorruption layer" générique à tous flux
         return true;
 
     }
-
-
 
 }

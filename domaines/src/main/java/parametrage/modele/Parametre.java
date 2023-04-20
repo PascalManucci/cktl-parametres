@@ -55,7 +55,7 @@ public class Parametre {
     public String profile(){return this.profile;}
 
 
-    // A voir cette expérimentation ....
+    // A voir cette expérimentation de gestion de side effect / CQRS plus tard ....
     @SideEffect
     public Parametre controler(){ // On applique tous les contrôle de l'agrégat qui vont émerger au fil du temps.
         return this;

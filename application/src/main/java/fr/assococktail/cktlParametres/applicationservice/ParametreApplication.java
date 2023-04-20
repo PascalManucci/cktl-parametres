@@ -19,7 +19,7 @@ public class ParametreApplication {
     }
 
     public List<Parametre> listerParametragePgi(){
-        return this.parametreService.listerParametragePgi();
+        return this.parametreService.listerParametrage();
     }
 
 
