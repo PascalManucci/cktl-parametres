@@ -3,9 +3,7 @@ package fr.assococktail.cktlParametres.infrastructure.persistenceAdapters.mapper
 import fr.assococktail.cktlParametres.infrastructure.persistenceAdapters.entities.GrhumDataParametre;
 import fr.assococktail.cktlParametres.infrastructure.persistenceAdapters.entities.StandardDataParametre;
 import org.springframework.context.annotation.Bean;
-import parametrage.modele.Commentaire;
-import parametrage.modele.Origine;
-import parametrage.modele.Parametre;
+import parametrage.modele.*;
 
 import java.util.Date;
 
@@ -18,7 +16,9 @@ public class MapperGrhumParametre {
     public Parametre mapParameter(StandardDataParametre params){
         Commentaire commentaire = new Commentaire(params.getCommentaires());
         Commentaire commentairelocal = new Commentaire(params.getCommentairelocal());
-        Parametre parametre = new Parametre(params.getOrdre(),params.getKey(),params.getValue(),commentaire,params.getDcreation(),params.getDmodification(),params.getTypeid(), commentairelocal, params.getTemlocal(), params.getOrigine(),params.getProfile());
+        Valeur valeur = new Valeur(params.getValue());
+        Cle cle = new Cle(params.getKey());
+        Parametre parametre = new Parametre(params.getOrdre(),cle,valeur,commentaire,params.getDcreation(),params.getDmodification(),params.getTypeid(), commentairelocal, params.getTemlocal(), params.getOrigine(),params.getProfile());
         return parametre;
 
     }

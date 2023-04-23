@@ -12,8 +12,8 @@ public class Parametre {
     protected Boolean isValide = true;
 
     private Integer ordre;
-    private String cle;
-    private String valeur;
+    private Cle cle;
+    private Valeur valeur;
     private Commentaire commentaires;
     private Date dateCreation;
     private Date dateModification;
@@ -27,7 +27,7 @@ public class Parametre {
 
     }
 
-    public Parametre(Integer ordre, String cle, String valeur, Commentaire commentaires, Date dateCreation, Date dateModification, Integer typeId, Commentaire commentaireLocal, String temLocal, Origine origine, String profile){
+    public Parametre(Integer ordre, Cle cle, Valeur valeur, Commentaire commentaires, Date dateCreation, Date dateModification, Integer typeId, Commentaire commentaireLocal, String temLocal, Origine origine, String profile){
         this.ordre = ordre;
         this.cle = cle;
         this.valeur = valeur;
@@ -43,8 +43,8 @@ public class Parametre {
     }
 
     public Integer ordre(){return this.ordre;}
-    public String  cle(){return this.cle;}
-    public String  valeur(){return this.valeur;}
+    public Cle  cle(){return this.cle;}
+    public Valeur  valeur(){return this.valeur;}
     public Commentaire commentaire(){return this.commentaires;};
     public Date dateCreation(){return this.dateCreation;}
     public Date dateModification(){return this.dateModification;}

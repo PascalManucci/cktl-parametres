@@ -9,13 +9,13 @@ server:
 #     password: password
     # driverClassName: org.h2.Driver
 spring:
-   datasource:
-     url: jdbc:oracle:thin:@bdorsatl3.sb.asso-cocktail.org:5221/DEVEICT01
-     username: grhum
-     password: grhum
-     driver-class-name: oracle.jdbc.driver.OracleDriver
-   jpa:
-     spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+  datasource:
+    url: jdbc:mariadb://localhost:3306/mysql
+    username: <login>
+    password: <password>
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
    hikari:
      connection-timeout: 60000
      maximum-pool-size: 10

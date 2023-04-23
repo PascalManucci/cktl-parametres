@@ -15,8 +15,8 @@ public class MapperParametreDTO {
 
     public ParametreDTO mapParameter(Parametre parametre){
         String ordre = Objects.nonNull(parametre.ordre())?parametre.ordre().toString():EMPTY;
-        String cle = Objects.nonNull(parametre.cle())?parametre.cle():EMPTY;
-        String valeur = Objects.nonNull(parametre.valeur())?parametre.valeur():EMPTY;
+        String cle = Objects.nonNull(parametre.cle())?parametre.cle().visualiserCle():EMPTY;
+        String valeur = Objects.nonNull(parametre.valeur())?parametre.valeur().visualiserValeur():EMPTY;
         String commentaire = Objects.nonNull(parametre.commentaire())?parametre.commentaire().visualiserCommentaire():EMPTY;
         String dcreation = Objects.nonNull(parametre.dateCreation())?parametre.dateCreation().toString():EMPTY;
         String dModification = Objects.nonNull(parametre.dateModification())?parametre.dateModification().toString():EMPTY;
