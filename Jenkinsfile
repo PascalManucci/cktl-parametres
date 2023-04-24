@@ -77,7 +77,7 @@ pipeline {
                                         devImage.withRun("--network ${network} --network-alias app -e database.version-checker-enabled=false -e DOCKER_CONFIG=/.docker -e TESTCONTAINERS_HUB_IMAGE_NAME_PREFIX=docker.depot.asso-cocktail.org/ -e SPRING_PROFILES_ACTIVE=stub -v /var/lib/jenkins/.docker:/.docker -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker -v ${WORKSPACE}:${WORKSPACE} -w ${WORKSPACE} -e JAVA_TOOL_OPTIONS=-javaagent:${WORKSPACE}/ta/postman/jacoco-0.8.7/jacocoagent.jar=destfile=${WORKSPACE}/ta/postman/jacocota-${JAVA_TOOL}.exec") { c ->
                                             try {
                                                 dir('ta/postman') {
-                                                    //1 - on lance les tests postman
+                                                    //1 - on lance les tests automatisés end to end et API (ici Postman)
                                                     docker.image('docker.depot.asso-cocktail.org/cocktail/newman-spring-apps:5.3.1-alpine-5').inside("--entrypoint='' --network ${network}") {
                                                         sh '''#!/bin/sh
                                                                 /tools/run.sh . http://app:8080 api/support-budgetaire-et-poste 90 > ta-postman-${JAVA_TOOL}.log
